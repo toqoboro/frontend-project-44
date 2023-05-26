@@ -17,10 +17,10 @@ const game = () => {
   const startpoint = getRandomNum(1, 10);
   const finishpoint = getRandomNum(0, lengthprogression - 2);
   const progression = getProgression(startpoint, stepprogression, lengthprogression);
-  const correctanswer = progression[finishpoint] ? progression[finishpoint].toString() : `ошибка ${progression}, ${finishpoint}`;
+  const rightAnswer = progression[finishpoint] ? progression[finishpoint].toString() : `ошибка ${progression}, ${finishpoint}`;
   progression.splice(finishpoint, 1, '..');
   const Quest = progression.join(' ');
-  return [correctanswer, Quest];
+  return [rightAnswer, Quest];
 };
 
 const gamestarterprogression = () => {
